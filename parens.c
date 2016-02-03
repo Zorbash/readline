@@ -76,12 +76,20 @@ _rl_enable_paren_matching (on_or_off)
       rl_bind_key_in_map (')', rl_insert_close, emacs_standard_keymap);
       rl_bind_key_in_map (']', rl_insert_close, emacs_standard_keymap);
       rl_bind_key_in_map ('}', rl_insert_close, emacs_standard_keymap);
+
+      rl_bind_key_in_map (')', rl_insert_close, vi_insertion_keymap);
+      rl_bind_key_in_map (']', rl_insert_close, vi_insertion_keymap);
+      rl_bind_key_in_map ('}', rl_insert_close, vi_insertion_keymap);
     }
   else
     {	/* ([{ */
       rl_bind_key_in_map (')', rl_insert, emacs_standard_keymap);
       rl_bind_key_in_map (']', rl_insert, emacs_standard_keymap);
       rl_bind_key_in_map ('}', rl_insert, emacs_standard_keymap);
+
+      rl_bind_key_in_map (')', rl_insert, vi_insertion_keymap);
+      rl_bind_key_in_map (']', rl_insert, vi_insertion_keymap);
+      rl_bind_key_in_map ('}', rl_insert, vi_insertion_keymap);
     }
 }
 
